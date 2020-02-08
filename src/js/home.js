@@ -9,6 +9,12 @@
     return data;
   }
 
+  const $form = document.getElementById("form");
+
+  $form.addEventListener("submit", event => {
+    event.preventDefault();
+  });
+
   const actionList = await getData(
     "https://yts.mx/api/v2/list_movies.json?genre=action"
   );
@@ -35,7 +41,7 @@
     return html.body.children[0];
   }
   function addEventClick($element) {
-    $element.addEventListener("click", function() {
+    $element.addEventListener("click", () => {
       alert("click");
     });
   }
@@ -59,7 +65,7 @@
   renderMovieList(animationList.data.movies, $animationContainer);
 
   const $featuringContainer = document.getElementById("#featuring");
-  const $form = document.getElementById("#form");
+
   const $home = document.getElementById("#home");
 
   // const $home = $('.home .list #item');
