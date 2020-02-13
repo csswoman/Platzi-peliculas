@@ -11,10 +11,12 @@
 
   const $form = document.getElementById("form");
   const $home = document.getElementById("home");
+  const $featuringContainer = document.getElementById("featuring");
 
   $form.addEventListener("submit", event => {
     event.preventDefault();
     $home.classList.add("search-active");
+    $featuringContainer.classList.add("act");
   });
 
   const actionList = await getData(
@@ -66,8 +68,6 @@
 
   const $animationContainer = document.getElementById("animation");
   renderMovieList(animationList.data.movies, $animationContainer);
-
-  const $featuringContainer = document.getElementById("#featuring");
 
   // const $home = $('.home .list #item');
   const $modal = document.getElementById("modal");
