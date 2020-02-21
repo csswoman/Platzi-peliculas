@@ -258,9 +258,8 @@ body {
   margin: 10px;
 }
 
-
 .fadeIn {
-  animation: 5000ms fadeIn;
+  animation: 3000ms fadeIn;
 }
 
 @keyframes fadeIn {
